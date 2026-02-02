@@ -795,7 +795,7 @@ implements ICFRefreshCallback
 		ICFSecSchemaObj schemaObj = (ICFSecSchemaObj)javafxSchema.getSchema();
 		if( ( containingTenant == null ) || forceReload ) {
 			ICFSecAuthorization auth = schemaObj.getAuthorization();
-			long containingClusterId = auth.getSecClusterId(); 
+			CFLibDbKeyHash256 containingClusterId = auth.getSecClusterId(); 
 			containingCluster = schemaObj.getClusterTableObj().readClusterByIdIdx( containingClusterId );
 			CFLibDbKeyHash256 containingTenantId = auth.getSecTenantId(); 
 			containingTenant = schemaObj.getTenantTableObj().readTenantByIdIdx( containingTenantId );
